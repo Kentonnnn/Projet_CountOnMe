@@ -45,6 +45,10 @@ class CalculatorViewController: UIViewController {
         textView.text.append(numberText)
     }
 
+    @IBAction func tappedClearCalculationButton(_ sender: Any) {
+        textView.text = "0"
+    }
+
     @IBAction func tappedAdditionButton(_ sender: UIButton) {
         if canAddOperator {
             textView.text.append(" + ")

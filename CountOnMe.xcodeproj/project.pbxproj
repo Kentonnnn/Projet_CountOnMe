@@ -14,6 +14,7 @@
 		1FA43BDD224E569A00F565CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA43BDB224E569A00F565CB /* LaunchScreen.storyboard */; };
 		7618814105449B257E2D1249 /* Pods_CountOnMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78C3F171A0C70FD45B4894C /* Pods_CountOnMeTests.framework */; };
 		9C62CB5C1B3ECE6401B73006 /* Pods_CountOnMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15565281AA041E03C2B85AD0 /* Pods_CountOnMe.framework */; };
+		CD292F7329F09E9000F28DE3 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD292F7229F09E9000F28DE3 /* CalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,7 @@
 		AC4A5F69376ECB3915DA36FC /* Pods-CountOnMe-CountOnMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMe-CountOnMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-CountOnMe-CountOnMeUITests/Pods-CountOnMe-CountOnMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F9456BD14A5B828EDE490 /* Pods-CountOnMe-CountOnMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMe-CountOnMeUITests.release.xcconfig"; path = "Target Support Files/Pods-CountOnMe-CountOnMeUITests/Pods-CountOnMe-CountOnMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF44A6B7CF6EDB6EAC96D9FD /* Pods-CountOnMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMe.release.xcconfig"; path = "Target Support Files/Pods-CountOnMe/Pods-CountOnMe.release.xcconfig"; sourceTree = "<group>"; };
+		CD292F7229F09E9000F28DE3 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
 		EBC5C18E8E3FD5B11188CA96 /* Pods_CountOnMe_CountOnMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountOnMe_CountOnMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78C3F171A0C70FD45B4894C /* Pods_CountOnMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountOnMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F976C9107BA43031B4473872 /* Pods-CountOnMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMeTests.debug.xcconfig"; path = "Target Support Files/Pods-CountOnMeTests/Pods-CountOnMeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 		CD391BAE29E8E840007FC2F0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CD292F7229F09E9000F28DE3 /* CalculatorModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -371,6 +374,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD292F7329F09E9000F28DE3 /* CalculatorModel.swift in Sources */,
 				1FA43BD5224E569900F565CB /* CalculatorViewController.swift in Sources */,
 				1FA43BD3224E569900F565CB /* AppDelegate.swift in Sources */,
 			);
