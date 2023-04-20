@@ -1,11 +1,10 @@
 import Foundation
 
 struct CalculatorModel {
-
     static func evaluateExpression(_ expression: String) -> String? {
         let elements = expression.split(separator: " ").map { "\($0)" }
 
-        guard elements.last != "+" && elements.last != "-" else {
+        guard elements.last != "+" && elements.last != "-" && elements.last != "*" && elements.last != "/" else {
             return nil
         }
 
@@ -24,6 +23,10 @@ struct CalculatorModel {
             switch operand {
             case "+": result = left + right
             case "-": result = left - right
+            case "*": result = left * right
+            case "/":
+                guard right != 0 else { return nil }
+                result = left / right
             default: fatalError("Unknown operator !")
             }
 
