@@ -65,6 +65,22 @@ class CalculatorViewController: UIViewController {
         }
     }
 
+    @IBAction func tappedMultiplicationButton(_ sender: Any) {
+        if canAddOperator {
+            textView.text.append(" * ")
+        } else {
+            displayError(message: "Un opérateur est déjà ajouté !")
+        }
+    }
+
+    @IBAction func tappedDivisionButton(_ sender: Any) {
+        if canAddOperator {
+            textView.text.append(" / ")
+        } else {
+            displayError(message: "Un opérateur est déjà ajouté !")
+        }
+    }
+
     @IBAction func tappedEqualButton(_ sender: UIButton) {
         guard let result = CalculatorModel.evaluateExpression(textView.text) else {
             displayError(message: "Entrez une expression correcte !")
