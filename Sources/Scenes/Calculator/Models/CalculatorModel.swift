@@ -50,11 +50,11 @@ final class CalculatorModel {
         var operationsToReduce = elements
 
         while operationsToReduce.count > 1 {
-            let left = Int(operationsToReduce[0])!
+            let left = Double(operationsToReduce[0])!
             let operand = operationsToReduce[1]
-            let right = Int(operationsToReduce[2])!
+            let right = Double(operationsToReduce[2])!
 
-            let result: Int
+            let result: Double
             switch operand {
             case "+": result = left + right
             case "-": result = left - right
@@ -74,6 +74,8 @@ final class CalculatorModel {
 
         }
 
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
         return .success(result)
     }
 }
