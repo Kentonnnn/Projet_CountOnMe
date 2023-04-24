@@ -2,34 +2,16 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
 
+    private let calculatorModel = CalculatorModel()
+
     @IBOutlet weak var textView: UITextView!
     @IBOutlet var numberButtons: [UIButton]!
-
-    var elements: [String] {
-        return textView.text.split(separator: " ").map { "\($0)" }
-    }
-
-    // Error check computed variables
-    var expressionIsCorrect: Bool {
-        return elements.last != "+" && elements.last != "-"
-    }
-
-    var expressionHaveEnoughElement: Bool {
-        return elements.count >= 3
-    }
-
-    var canAddOperator: Bool {
-        return elements.last != "+" && elements.last != "-"
-    }
-
-    var expressionHaveResult: Bool {
-        return textView.text.firstIndex(of: "=") != nil
-    }
 
     // View Life cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        calculatorModel.rawElements = "1 + 1"
     }
 
     // View actions
@@ -38,62 +20,61 @@ class CalculatorViewController: UIViewController {
             return
         }
 
-        if expressionHaveResult {
+        if calculatorModel.expressionHaveResult {
             textView.text = ""
+            calculatorModel.rawElements = textView.text
         }
 
         textView.text.append(numberText)
+        calculatorModel.rawElements = textView.text
     }
 
-    @IBAction func tappedClearCalculationButton(_ sender: Any) {
+    @IBAction func tappedClearCalculationButton(_ sender: UIButton) {
         textView.text = "0"
     }
 
     @IBAction func tappedAdditionButton(_ sender: UIButton) {
-        if canAddOperator {
-            textView.text.append(" + ")
-        } else {
-            displayError(message: "Un operateur est déja mis !")
-        }
+        add(newOperator: "+")
     }
 
     @IBAction func tappedSubstractionButton(_ sender: UIButton) {
-        if canAddOperator {
-            textView.text.append(" - ")
-        } else {
-            displayError(message: "Un operateur est déja mis !")
-        }
+        add(newOperator: "-")
     }
 
-    @IBAction func tappedMultiplicationButton(_ sender: Any) {
-        if canAddOperator {
-            textView.text.append(" * ")
-        } else {
-            displayError(message: "Un opérateur est déjà ajouté !")
-        }
+    @IBAction func tappedMultiplicationButton(_ sender: UIButton) {
+        add(newOperator: "*")
     }
 
-    @IBAction func tappedDivisionButton(_ sender: Any) {
-        if canAddOperator {
-            textView.text.append(" / ")
+    @IBAction func tappedDivisionButton(_ sender: UIButton) {
+        add(newOperator: "/")
+    }
+
+    private func add(newOperator: String) {
+        if calculatorModel.canAddOperator {
+            textView.text.append(" \(newOperator) ")
+            calculatorModel.rawElements = textView.text
         } else {
             displayError(message: "Un opérateur est déjà ajouté !")
         }
     }
 
     @IBAction func tappedEqualButton(_ sender: UIButton) {
-        guard let result = CalculatorModel.evaluateExpression(textView.text) else {
-            displayError(message: "Entrez une expression correcte !")
-            return
-        }
+        let result = calculatorModel.evaluateExpression()
 
-        textView.text.append(" = \(result)")
+        switch result {
+        case .success(let value):
+            textView.text.append(" = \(value)")
+
+        case .failure(let error):
+            displayError(message: error.errorDescription ?? "")
+        }
     }
 
     // Error check computed variables
-    private func displayError(message: String) {
-        let alertVC = UIAlertController(title: "Zéro!", message: message, preferredStyle: .alert)
+    private func displayError(tittle: String = "Error", message: String) {
+        let alertVC = UIAlertController(title: tittle, message: message, preferredStyle: .alert)
         alertVC.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-        self.present(alertVC, animated: true, completion: nil)
+
+        present(alertVC, animated: true, completion: nil)
     }
 }
