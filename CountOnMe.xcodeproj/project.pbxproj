@@ -100,6 +100,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CD2F155B29F60C9500F3F38A /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CD2F155C29F60CAD00F3F38A /* Calculator */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CD2F155C29F60CAD00F3F38A /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				CD2F155D29F60CBB00F3F38A /* Models */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		CD2F155D29F60CBB00F3F38A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		CD391BA929E8DA42007FC2F0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +134,7 @@
 		CD391BAA29E8DA94007FC2F0 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				CD391BAF29E8E84B007FC2F0 /* Scenes */,
+				CD2F155B29F60C9500F3F38A /* Scenes */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -145,29 +168,6 @@
 			isa = PBXGroup;
 			children = (
 				CD292F7229F09E9000F28DE3 /* CalculatorModel.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		CD391BAF29E8E84B007FC2F0 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				CD391BB029E8E856007FC2F0 /* Calculator */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		CD391BB029E8E856007FC2F0 /* Calculator */ = {
-			isa = PBXGroup;
-			children = (
-				CD391BB129E8E861007FC2F0 /* Models */,
-			);
-			path = Calculator;
-			sourceTree = "<group>";
-		};
-		CD391BB129E8E861007FC2F0 /* Models */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = Models;
 			sourceTree = "<group>";
