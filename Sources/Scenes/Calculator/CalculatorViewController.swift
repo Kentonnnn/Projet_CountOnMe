@@ -3,6 +3,7 @@ import UIKit
 class CalculatorViewController: UIViewController {
 
     private let calculatorModel = CalculatorModel()
+    private var currentState: CalculatorState = .resultDisplayed
 
     @IBOutlet weak var textView: UITextView!
     @IBOutlet var numberButtons: [UIButton]!
@@ -11,7 +12,8 @@ class CalculatorViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        calculatorModel.rawElements = "1 + 1"
+        calculatorModel.rawElements = "1 + 1 = 2"
+        textView.text = calculatorModel.rawElements
     }
 
     // View actions
@@ -20,9 +22,13 @@ class CalculatorViewController: UIViewController {
             return
         }
 
-        if calculatorModel.expressionHaveResult {
+        if currentState == .resultDisplayed {
             textView.text = ""
-            calculatorModel.rawElements = textView.text
+            currentState = .newInputExpected
+        }
+
+        if textView.text == "0" {
+            textView.text = ""
         }
 
         textView.text.append(numberText)
@@ -31,6 +37,7 @@ class CalculatorViewController: UIViewController {
 
     @IBAction func tappedClearCalculationButton(_ sender: UIButton) {
         textView.text = "0"
+        currentState = .resultDisplayed
     }
 
     @IBAction func tappedAdditionButton(_ sender: UIButton) {
@@ -53,6 +60,7 @@ class CalculatorViewController: UIViewController {
         if calculatorModel.canAddOperator {
             textView.text.append(" \(newOperator) ")
             calculatorModel.rawElements = textView.text
+            currentState = .newInputExpected
         } else {
             displayError(message: "Un opérateur est déjà ajouté !")
         }
@@ -63,7 +71,8 @@ class CalculatorViewController: UIViewController {
 
         switch result {
         case .success(let value):
-            textView.text.append(" = \(value)")
+            textView.text = "\(value)"
+            currentState = .resultDisplayed
 
         case .failure(let error):
             displayError(message: error.errorDescription ?? "")
@@ -77,4 +86,9 @@ class CalculatorViewController: UIViewController {
 
         present(alertVC, animated: true, completion: nil)
     }
+}
+
+enum CalculatorState {
+    case resultDisplayed
+    case newInputExpected
 }
