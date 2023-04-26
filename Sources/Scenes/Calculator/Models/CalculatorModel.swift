@@ -38,6 +38,54 @@ final class CalculatorModel {
         return elements.firstIndex(of: "=") != nil
     }
 
+    func performMultiplicationAndDivision(_ operationsToReduce: [String]) -> Result<[String], CalculatorModelError> {
+        var reducedOperations = operationsToReduce
+
+        while reducedOperations.contains("*") || reducedOperations.contains("/") {
+            if let multiplicationIndex = reducedOperations.firstIndex(of: "*") {
+                let left = Double(reducedOperations[multiplicationIndex-1])!
+                let right = Double(reducedOperations[multiplicationIndex+1])!
+                let result = left * right
+                reducedOperations.replaceSubrange((multiplicationIndex-1)...(multiplicationIndex+1),
+                                                  with: ["\(result)"])
+            } else if let divisionIndex = reducedOperations.firstIndex(of: "/") {
+                let left = Double(reducedOperations[divisionIndex-1])!
+                let right = Double(reducedOperations[divisionIndex+1])!
+                guard right != 0 else { return .failure(.divideByZero) }
+                let result = left / right
+                reducedOperations.replaceSubrange((divisionIndex-1)...(divisionIndex+1), with: ["\(result)"])
+            }
+        }
+
+        return .success(reducedOperations)
+    }
+
+    func performAdditionAndSubtraction(_ operationsToReduce: [String]) -> Result<String, CalculatorModelError> {
+        var reducedOperations = operationsToReduce
+
+        while reducedOperations.count > 1 {
+            let left = Double(reducedOperations[0])!
+            let operand = reducedOperations[1]
+            let right = Double(reducedOperations[2])!
+
+            let result: Double
+            switch operand {
+            case "+": result = left + right
+            case "-": result = left - right
+            default: fatalError("Unknown operator !")
+            }
+
+            reducedOperations = Array(reducedOperations.dropFirst(3))
+            reducedOperations.insert("\(result)", at: 0)
+        }
+
+        guard let result = reducedOperations.first else {
+            return .failure(.operationIsInvalid)
+        }
+
+        return .success(result)
+    }
+
     func evaluateExpression() -> Result<String, CalculatorModelError> {
         guard elements.last != "+" && elements.last != "-" && elements.last != "*" && elements.last != "/" else {
             return .failure(.operationIsInvalid)
@@ -47,35 +95,12 @@ final class CalculatorModel {
             return .failure(.notEnoughElement)
         }
 
-        var operationsToReduce = elements
-
-        while operationsToReduce.count > 1 {
-            let left = Double(operationsToReduce[0])!
-            let operand = operationsToReduce[1]
-            let right = Double(operationsToReduce[2])!
-
-            let result: Double
-            switch operand {
-            case "+": result = left + right
-            case "-": result = left - right
-            case "*": result = left * right
-            case "/":
-                guard right != 0 else { return .failure(.divideByZero) }
-                result = left / right
-            default: fatalError("Unknown operator !")
-            }
-
-            operationsToReduce = Array(operationsToReduce.dropFirst(3))
-            operationsToReduce.insert("\(result)", at: 0)
+        let multiplicationAndDivisionResult = performMultiplicationAndDivision(elements)
+        switch multiplicationAndDivisionResult {
+        case .success(let operationsToReduce):
+            return performAdditionAndSubtraction(operationsToReduce)
+        case .failure(let error):
+            return .failure(error)
         }
-
-        guard let result = operationsToReduce.first else {
-            return .failure(.operationIsInvalid)
-
-        }
-
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = .decimal
-        return .success(result)
     }
 }
