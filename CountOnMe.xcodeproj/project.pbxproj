@@ -12,18 +12,18 @@
 		1FA43BD8224E569900F565CB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA43BD6224E569900F565CB /* Main.storyboard */; };
 		1FA43BDA224E569A00F565CB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FA43BD9224E569A00F565CB /* Assets.xcassets */; };
 		1FA43BDD224E569A00F565CB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FA43BDB224E569A00F565CB /* LaunchScreen.storyboard */; };
-		7618814105449B257E2D1249 /* Pods_CountOnMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F78C3F171A0C70FD45B4894C /* Pods_CountOnMeTests.framework */; };
 		9C62CB5C1B3ECE6401B73006 /* Pods_CountOnMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15565281AA041E03C2B85AD0 /* Pods_CountOnMe.framework */; };
 		CD292F7329F09E9000F28DE3 /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD292F7229F09E9000F28DE3 /* CalculatorModel.swift */; };
+		CD7E77F829FA5F0C00D1101F /* CalculatorModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD7E77F729FA5F0C00D1101F /* CalculatorModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1FA43BE4224E569A00F565CB /* PBXContainerItemProxy */ = {
+		CD7E77EF29FA5E5100D1101F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 1FA43BC7224E569900F565CB /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 1FA43BCE224E569900F565CB;
-			remoteInfo = SimpleCalc;
+			remoteInfo = CountOnMe;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -36,13 +36,14 @@
 		1FA43BD9224E569A00F565CB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FA43BDC224E569A00F565CB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FA43BDE224E569A00F565CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1FA43BE3224E569A00F565CB /* CountOnMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountOnMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		401F31059F62FA191979DC42 /* Pods-CountOnMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMeTests.release.xcconfig"; path = "Target Support Files/Pods-CountOnMeTests/Pods-CountOnMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		892C3199FD3632ECC6038C67 /* Pods-CountOnMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMe.debug.xcconfig"; path = "Target Support Files/Pods-CountOnMe/Pods-CountOnMe.debug.xcconfig"; sourceTree = "<group>"; };
 		AC4A5F69376ECB3915DA36FC /* Pods-CountOnMe-CountOnMeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMe-CountOnMeUITests.debug.xcconfig"; path = "Target Support Files/Pods-CountOnMe-CountOnMeUITests/Pods-CountOnMe-CountOnMeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B80F9456BD14A5B828EDE490 /* Pods-CountOnMe-CountOnMeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMe-CountOnMeUITests.release.xcconfig"; path = "Target Support Files/Pods-CountOnMe-CountOnMeUITests/Pods-CountOnMe-CountOnMeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF44A6B7CF6EDB6EAC96D9FD /* Pods-CountOnMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMe.release.xcconfig"; path = "Target Support Files/Pods-CountOnMe/Pods-CountOnMe.release.xcconfig"; sourceTree = "<group>"; };
 		CD292F7229F09E9000F28DE3 /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		CD7E77EB29FA5E5100D1101F /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD7E77F729FA5F0C00D1101F /* CalculatorModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModelTests.swift; sourceTree = "<group>"; };
 		EBC5C18E8E3FD5B11188CA96 /* Pods_CountOnMe_CountOnMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountOnMe_CountOnMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F78C3F171A0C70FD45B4894C /* Pods_CountOnMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountOnMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F976C9107BA43031B4473872 /* Pods-CountOnMeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountOnMeTests.debug.xcconfig"; path = "Target Support Files/Pods-CountOnMeTests/Pods-CountOnMeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -57,11 +58,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FA43BE0224E569A00F565CB /* Frameworks */ = {
+		CD7E77E829FA5E5100D1101F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7618814105449B257E2D1249 /* Pods_CountOnMeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,7 +77,7 @@
 				1FA43BD0224E569900F565CB /* Products */,
 				CD391BAC29E8DB07007FC2F0 /* Ressources */,
 				CD391BA929E8DA42007FC2F0 /* Sources */,
-				CD391BAA29E8DA94007FC2F0 /* Tests */,
+				CD7E77EC29FA5E5100D1101F /* Tests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				1FA43BCF224E569900F565CB /* CountOnMe.app */,
-				1FA43BE3224E569A00F565CB /* CountOnMeTests.xctest */,
+				CD7E77EB29FA5E5100D1101F /* Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,43 +100,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		CD2F155B29F60C9500F3F38A /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				CD2F155C29F60CAD00F3F38A /* Calculator */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		CD2F155C29F60CAD00F3F38A /* Calculator */ = {
-			isa = PBXGroup;
-			children = (
-				CD2F155D29F60CBB00F3F38A /* Models */,
-			);
-			path = Calculator;
-			sourceTree = "<group>";
-		};
-		CD2F155D29F60CBB00F3F38A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		CD391BA929E8DA42007FC2F0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				CDCC862A29E778180083633F /* Scenes */,
 			);
 			path = Sources;
-			sourceTree = "<group>";
-		};
-		CD391BAA29E8DA94007FC2F0 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				CD2F155B29F60C9500F3F38A /* Scenes */,
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 		CD391BAB29E8DAE6007FC2F0 /* Configurations */ = {
@@ -179,6 +148,38 @@
 				1FA43BD6224E569900F565CB /* Main.storyboard */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CD7E77EC29FA5E5100D1101F /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CD7E77F429FA5E7E00D1101F /* Scenes */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CD7E77F429FA5E7E00D1101F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CD7E77F529FA5E8B00D1101F /* Calculator */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CD7E77F529FA5E8B00D1101F /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				CD7E77F629FA5E9200D1101F /* Models */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		CD7E77F629FA5E9200D1101F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD7E77F729FA5F0C00D1101F /* CalculatorModelTests.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		CDCC862A29E778180083633F /* Scenes */ = {
@@ -226,23 +227,22 @@
 			productReference = 1FA43BCF224E569900F565CB /* CountOnMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1FA43BE2224E569A00F565CB /* CountOnMeTests */ = {
+		CD7E77EA29FA5E5100D1101F /* Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1FA43BFA224E569A00F565CB /* Build configuration list for PBXNativeTarget "CountOnMeTests" */;
+			buildConfigurationList = CD7E77F129FA5E5100D1101F /* Build configuration list for PBXNativeTarget "Tests" */;
 			buildPhases = (
-				7F695733FCE9B349156A9805 /* [CP] Check Pods Manifest.lock */,
-				1FA43BDF224E569A00F565CB /* Sources */,
-				1FA43BE0224E569A00F565CB /* Frameworks */,
-				1FA43BE1224E569A00F565CB /* Resources */,
+				CD7E77E729FA5E5100D1101F /* Sources */,
+				CD7E77E829FA5E5100D1101F /* Frameworks */,
+				CD7E77E929FA5E5100D1101F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1FA43BE5224E569A00F565CB /* PBXTargetDependency */,
+				CD7E77F029FA5E5100D1101F /* PBXTargetDependency */,
 			);
-			name = CountOnMeTests;
-			productName = SimpleCalcTests;
-			productReference = 1FA43BE3224E569A00F565CB /* CountOnMeTests.xctest */;
+			name = Tests;
+			productName = Tests;
+			productReference = CD7E77EB29FA5E5100D1101F /* Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -251,15 +251,16 @@
 		1FA43BC7224E569900F565CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				ORGANIZATIONNAME = "Vincent Saluzzo";
 				TargetAttributes = {
 					1FA43BCE224E569900F565CB = {
 						CreatedOnToolsVersion = 10.2;
 					};
-					1FA43BE2224E569A00F565CB = {
-						CreatedOnToolsVersion = 10.2;
+					CD7E77EA29FA5E5100D1101F = {
+						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 						TestTargetID = 1FA43BCE224E569900F565CB;
 					};
 				};
@@ -278,7 +279,7 @@
 			projectRoot = "";
 			targets = (
 				1FA43BCE224E569900F565CB /* CountOnMe */,
-				1FA43BE2224E569A00F565CB /* CountOnMeTests */,
+				CD7E77EA29FA5E5100D1101F /* Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -294,7 +295,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FA43BE1224E569A00F565CB /* Resources */ = {
+		CD7E77E929FA5E5100D1101F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -320,28 +321,6 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-CountOnMe-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F695733FCE9B349156A9805 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CountOnMeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -380,20 +359,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1FA43BDF224E569A00F565CB /* Sources */ = {
+		CD7E77E729FA5E5100D1101F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD7E77F829FA5F0C00D1101F /* CalculatorModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		1FA43BE5224E569A00F565CB /* PBXTargetDependency */ = {
+		CD7E77F029FA5E5100D1101F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1FA43BCE224E569900F565CB /* CountOnMe */;
-			targetProxy = 1FA43BE4224E569A00F565CB /* PBXContainerItemProxy */;
+			targetProxy = CD7E77EF29FA5E5100D1101F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -573,45 +553,54 @@
 			};
 			name = Release;
 		};
-		1FA43BFB224E569A00F565CB /* Debug */ = {
+		CD7E77F229FA5E5100D1101F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F976C9107BA43031B4473872 /* Pods-CountOnMeTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Configurations/Info.plist";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vincentsaluzzo.SimpleCalcTests;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/CountOnMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CountOnMe";
 			};
 			name = Debug;
 		};
-		1FA43BFC224E569A00F565CB /* Release */ = {
+		CD7E77F329FA5E5100D1101F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 401F31059F62FA191979DC42 /* Pods-CountOnMeTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "$(SRCROOT)/Configurations/Info.plist";
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.vincentsaluzzo.SimpleCalcTests;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.openclassrooms.Tests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/CountOnMe";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CountOnMe.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CountOnMe";
 			};
 			name = Release;
 		};
@@ -636,11 +625,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1FA43BFA224E569A00F565CB /* Build configuration list for PBXNativeTarget "CountOnMeTests" */ = {
+		CD7E77F129FA5E5100D1101F /* Build configuration list for PBXNativeTarget "Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1FA43BFB224E569A00F565CB /* Debug */,
-				1FA43BFC224E569A00F565CB /* Release */,
+				CD7E77F229FA5E5100D1101F /* Debug */,
+				CD7E77F329FA5E5100D1101F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
