@@ -43,17 +43,20 @@ final class CalculatorModel {
 
         while reducedOperations.contains("*") || reducedOperations.contains("/") {
             if let multiplicationIndex = reducedOperations.firstIndex(of: "*") {
-                let left = Double(reducedOperations[multiplicationIndex-1])!
-                let right = Double(reducedOperations[multiplicationIndex+1])!
+                guard let left = Double(reducedOperations[multiplicationIndex - 1]), let right = Double(reducedOperations[multiplicationIndex + 1]) else {
+                    return .failure(.operationIsInvalid)
+                }
+
                 let result = left * right
-                reducedOperations.replaceSubrange((multiplicationIndex-1)...(multiplicationIndex+1),
-                                                  with: ["\(result)"])
+
+                reducedOperations.replaceSubrange((multiplicationIndex - 1)...(multiplicationIndex + 1), with: ["\(result)"])
             } else if let divisionIndex = reducedOperations.firstIndex(of: "/") {
-                let left = Double(reducedOperations[divisionIndex-1])!
-                let right = Double(reducedOperations[divisionIndex+1])!
+                guard let left = Double(reducedOperations[divisionIndex - 1]), let right = Double(reducedOperations[divisionIndex + 1]) else {
+                    return .failure(.operationIsInvalid)
+                }
                 guard right != 0 else { return .failure(.divideByZero) }
                 let result = left / right
-                reducedOperations.replaceSubrange((divisionIndex-1)...(divisionIndex+1), with: ["\(result)"])
+                reducedOperations.replaceSubrange((divisionIndex - 1)...(divisionIndex + 1), with: ["\(result)"])
             }
         }
 
@@ -64,9 +67,15 @@ final class CalculatorModel {
         var reducedOperations = operationsToReduce
 
         while reducedOperations.count > 1 {
-            let left = Double(reducedOperations[0])!
+            guard let left = Double(reducedOperations[0]) else {
+                return .failure(.operationIsInvalid)
+            }
+
             let operand = reducedOperations[1]
-            let right = Double(reducedOperations[2])!
+
+            guard let right = Double(reducedOperations[2]) else {
+                return .failure(.operationIsInvalid)
+            }
 
             let result: Double
             switch operand {
