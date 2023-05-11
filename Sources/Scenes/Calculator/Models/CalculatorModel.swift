@@ -17,6 +17,11 @@ enum CalculatorModelError: LocalizedError {
     }
 }
 
+enum CalculatorState {
+    case resultDisplayed
+    case newInputExpected
+}
+
 final class CalculatorModel {
 
     var rawElements = ""
