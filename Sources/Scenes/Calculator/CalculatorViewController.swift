@@ -87,8 +87,3 @@ class CalculatorViewController: UIViewController {
         present(alertVC, animated: true, completion: nil)
     }
 }
-
-enum CalculatorState {
-    case resultDisplayed
-    case newInputExpected
-}

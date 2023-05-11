@@ -13,7 +13,7 @@ final class CalculatorModelTests: XCTestCase {
     var firstNumber = 5
     var secondNumber = 2
 
-    func testAddition() {
+    func testGivenTwoNumbers_WhenPerformingAddition_ThenResultShouldBeCorrect() {
         // Given
         let expectedResult = "7.0"
 
@@ -30,7 +30,7 @@ final class CalculatorModelTests: XCTestCase {
         }
     }
 
-    func testSubtraction() {
+    func testGivenTwoNumbers_WhenPerformingSubtraction_ThenResultShouldBeCorrect() {
         // Given
         let expectedResult = "3.0"
 
@@ -47,7 +47,7 @@ final class CalculatorModelTests: XCTestCase {
         }
     }
 
-    func testMultiplication() {
+    func testGivenTwoNumbers_WhenPerformingMultiplication_ThenResultShouldBeCorrect() {
         // Given
         let expectedResult = "10.0"
 
@@ -64,7 +64,7 @@ final class CalculatorModelTests: XCTestCase {
         }
     }
 
-    func testDivision() {
+    func testGivenTwoNumbers_WhenPerformingDivision_ThenResultShouldBeCorrect() {
         // Given
         let expectedResult = "2.5"
 
@@ -81,7 +81,7 @@ final class CalculatorModelTests: XCTestCase {
         }
     }
 
-    func testDivisionByZero() {
+    func testGivenDivisorIsZero_WhenPerformingDivision_ThenErrorShouldBeDivideByZero() {
         // Given
         let numberZero = 0
 
